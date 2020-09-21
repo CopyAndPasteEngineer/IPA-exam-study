@@ -1,6 +1,6 @@
 module.exports = {
     base: '/IPA-exam-study/',
-    dest: './build',
+    dest: './docs',
 
     title: 'IPAテスト勉強',
     description: 'IPAテスト勉強用サイト',

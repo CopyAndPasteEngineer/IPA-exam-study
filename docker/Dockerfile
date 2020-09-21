@@ -8,5 +8,5 @@ ADD .yarnrc /workspace/.yarnrc
 ADD package.json /workspace/package.json
 RUN yarn install
 
-ADD docs /workspace/docs
+ADD vuepress /workspace/vuepress
 CMD ["yarn", "build"]
