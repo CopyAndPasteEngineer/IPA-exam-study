@@ -12,7 +12,6 @@ module.exports = {
         nav: [
             { text: 'Home', link: '/' },
             { text: '応用情報技術者試験', link: '/ap/' },
-            { text: 'About', link: '/about/' },
         ]
     },
 }

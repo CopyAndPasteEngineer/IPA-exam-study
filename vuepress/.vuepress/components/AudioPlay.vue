@@ -28,7 +28,18 @@ module.exports = {
 
     var index = 0;
     var audio = document.getElementById('playList');
-    console.log(playList);
+
+    // シャッフル
+    if(document.getElementById('shuffle').checked){
+      for (let i = playList.length - 1; i >= 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [playList[i], playList[j]] = [playList[j], playList[i]];
+      }
+    }
+
+    // リピート
+    var repeat = document.getElementById('repeat').checked;
+
     audio.src = playList[index];
     audio.play();
     audio.addEventListener('ended', function(){
@@ -38,11 +49,12 @@ module.exports = {
         audio.play();
     }else {
         audio.src = playList[0];
-        audio.play();
+        if(repeat){
+            audio.play();
+        }
         index = 0;
     }
     });
-
     },
   },
 }
